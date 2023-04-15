@@ -1,0 +1,21 @@
+label{
+    color: #FFE77AFF;
+}
+
+.errorText{
+    color: red;
+}
+
+.indata{
+    border-radius: 5px;
+    width: 17vw;
+}
+
+.input{
+    background-color: #2C5F2DFF;
+    border-radius: 5%;
+    margin-left: 38vw;
+    margin-top: 20vh;
+    padding: 50px;
+    width: fit-content;
+}

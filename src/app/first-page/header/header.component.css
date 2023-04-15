@@ -1,0 +1,13 @@
+#house{
+    margin-top: 20px;
+    margin-left: 48%;
+}
+
+.bi-house{
+    cursor: pointer;
+}
+
+.header{
+    background-color: #2C5F2DFF;
+    height: 15vh;
+}
