@@ -13,6 +13,6 @@ export class HeaderComponent {
   }
 
   public goHome() {
-    this.router.navigate(['/component']);
+    this.router.navigate(['']); 
   }
 }

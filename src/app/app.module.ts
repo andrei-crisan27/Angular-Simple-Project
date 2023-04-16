@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './first-page/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './first-page/login/login.component';
+import { CardsComponent } from './second-page/cards/cards.component';
+import { GroupComponent } from './second-page/group/group.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    CardsComponent,
+    GroupComponent
   ],
   imports: [
     BrowserModule,

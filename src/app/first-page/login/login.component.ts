@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  public validCredentials: boolean = false;
+  public checked: boolean = false;
 
   public credentials = new FormGroup(
     {
@@ -21,11 +23,25 @@ export class LoginComponent {
 
   }
 
+  change(){
+    this.checked = !this.checked;
+    console.log(this.checked)
+  }
+
   login(){
     this.credentials.updateValueAndValidity();
     if (this.credentials.controls['user'].value === 'user@mail.com'
     && this.credentials.controls['pass'].value === 'password'){
+      if(this.checked === false){
+        this.validCredentials = true;
+      }
+      else{
+      this.validCredentials = false;
       this.router.navigate(['/cards']);
+      }
+    }
+    else{
+      this.validCredentials = true;
     }
   }
 

@@ -4,11 +4,12 @@
         <input type="text" class="indata" name="user" formControlName="user"><br>
         <label for="pass">password:</label><br>
         <input type="password" class="indata" name="pass" formControlName="pass"><br>
-        <input type="checkbox" name="check">
+        <input type="checkbox" name="check" (click)="change()">
         <label for="checkbox">You need to check this!</label><br>
         <button type="button" class="btn btn-success" (click)="login()">Submit</button>
         <div *ngIf="credentials.controls['user'].dirty && credentials.controls['user'].errors" class="errorText">The email provided is not valid!</div>
         <div *ngIf="credentials.controls['pass'].dirty && credentials.controls['pass'].errors" class="errorText">The password must be at least 8 characters long!</div>
-        <div *ngIf="credentials.controls['check'].touched && credentials.controls['check'].errors" class="errorText">You must check this!</div>
+        <div *ngIf="credentials.controls['check'].hasError('requiredTrue')" class="errorText">You must check this!</div>
+        <div *ngIf="validCredentials" class="errorText">Wrong credentials!</div>
     </form>
 </div>
