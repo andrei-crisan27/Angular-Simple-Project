@@ -1,3 +1,6 @@
 <div class="single-group">
-    <button>Add new card</button>
+    <div *ngFor="let object of allObjects" class="cardsDisplay">
+        <app-single-card></app-single-card>
+    </div>
+    <button (click)="addObject()">Add new object</button>
 </div>

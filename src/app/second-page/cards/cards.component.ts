@@ -11,6 +11,5 @@ export class CardsComponent {
 
   addGroup(){
     this.allGroups.push(new GroupComponent);
-    console.log(this.allGroups.length)
   }
 }

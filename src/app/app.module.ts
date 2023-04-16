@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './first-page/login/login.component';
 import { CardsComponent } from './second-page/cards/cards.component';
 import { GroupComponent } from './second-page/group/group.component';
+import { SingleCardComponent } from './second-page/single-card/single-card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GroupComponent } from './second-page/group/group.component';
     HeaderComponent,
     LoginComponent,
     CardsComponent,
-    GroupComponent
+    GroupComponent,
+    SingleCardComponent
   ],
   imports: [
     BrowserModule,

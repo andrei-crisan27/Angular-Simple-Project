@@ -1,5 +1,10 @@
+.cardsDisplay{
+    display: inline-block;
+    margin-right: 10px;
+}
+
 .single-group{
     background-color: #2C5F2DFF;
-    height: 20vh;
-    margin: 20px;
+    height: 25vh;
+    margin: 40px;
 }
