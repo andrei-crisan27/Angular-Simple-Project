@@ -5,6 +5,16 @@
 
 .single-group{
     background-color: #2C5F2DFF;
-    height: 25vh;
+    display: flex;
+    height: 50vh;
     margin: 40px;
+    overflow-x: auto;
+}
+
+.addObject{
+    border-radius: 5px;
+    background-color: cornsilk;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    max-height: 50%;
 }

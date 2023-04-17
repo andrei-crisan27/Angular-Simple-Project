@@ -1,6 +1,7 @@
 <div class="single-group">
-    <div *ngFor="let object of allObjects" class="cardsDisplay">
-        <app-single-card></app-single-card>
+    <div *ngFor="let object of allObjects; index as i" class="cardsDisplay">
+        <app-single-card [data]="object" [index]="i" (deleteUser)="deleteCard($event)"></app-single-card>
     </div>
-    <button (click)="addObject()">Add new object</button>
+    <button class="addObject" (click)="addObject()">Add new object</button>
 </div>
+  

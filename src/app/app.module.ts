@@ -9,6 +9,7 @@ import { LoginComponent } from './first-page/login/login.component';
 import { CardsComponent } from './second-page/cards/cards.component';
 import { GroupComponent } from './second-page/group/group.component';
 import { SingleCardComponent } from './second-page/single-card/single-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SingleCardComponent } from './second-page/single-card/single-card.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

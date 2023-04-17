@@ -1,5 +1,12 @@
 .card{
-    max-height: 80%;
+    background-color: white;
+    border: solid;
+    border-width: 5px;
     max-width: 100%; 
     width: 18rem; 
+}
+
+.deleteCard{
+    background-color: cornsilk;
+    border-radius: 5px;
 }

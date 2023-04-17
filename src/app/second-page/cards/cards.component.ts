@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { GroupComponent } from '../group/group.component';
+import { ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-cards',
@@ -9,7 +11,15 @@ import { GroupComponent } from '../group/group.component';
 export class CardsComponent {
   public allGroups = new Array<GroupComponent>();
 
-  addGroup(){
-    this.allGroups.push(new GroupComponent);
-  }
+  constructor(private componentFactoryResolver: ComponentFactoryResolver, private viewContainerRef: ViewContainerRef) { }
+
+  addGroup() {
+  const componentFactory = this.componentFactoryResolver.resolveComponentFactory(GroupComponent);
+  const componentRef = this.viewContainerRef.createComponent(componentFactory);
+  const groupComponent = componentRef.instance;
+  this.allGroups.push(groupComponent);
+  console.log(this.allGroups.length);
+  this.allGroups.pop()
+}
+
 }
